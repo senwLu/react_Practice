@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>React Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- Hello World with HTML -->
+    <!-- <p>Hello World</p> -->
+
+    <div id="root"></div>
+
+    <!-- Hello World with Javascript -->
+    <!--
+      <script type="text/javascript">
+        const rootElement = document.getElementById("root");
+        const element = document.createElement("div");
+        element.textContent = "Hello World";
+        element.className = "container";
+        rootElement.appendChild(element);
+      </script>
+    -->
+
+    <!-- Hello World with React -->
+    <script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.production.min.js"></script>
+    <!--
+      <script type="text/javascript">
+        const rootElement = document.getElementById("root");
+        const element = React.createElement("div", {
+          className: "container",
+          children: ["Hello World", "Goodbye World"]
+        });
+
+        ReactDOM.render(element, rootElement);
+      </script>
+    -->
+
+    <!-- Hello World with React JSX -->
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+      const content = "Hello World";
+      const myClassName = "container";
+
+      const props = {
+        className: "container",
+        children: "Hello World"
+      };
+      const element = <div {...props} className="my-class" />;
+      ReactDOM.render(element, rootElement);
+    </script>
+  </body>
+</html>
