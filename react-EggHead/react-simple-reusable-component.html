@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Simple Reuseable React Component</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.3.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+      const Message = props => <div>{props.msg}</div>;
+
+      const element = (
+        <div className="container">
+          <Message msg="Hello World" />
+          <Message msg="Goodbye World" />
+        </div>
+      );
+
+      ReactDOM.render(element, rootElement);
+    </script>
+  </body>
+</html>
